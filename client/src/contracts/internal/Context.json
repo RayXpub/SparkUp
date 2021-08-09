@@ -10,7 +10,11 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "// SPDX-License-Identifier: MIT\n\npragma solidity ^0.8.0;\n\n/*\n * @dev Provides information about the current execution context, including the\n * sender of the transaction and its data. While these are generally available\n * via msg.sender and msg.data, they should not be accessed in such a direct\n * manner, since when dealing with meta-transactions the account sending and\n * paying for execution may not be the actual sender (as far as an application\n * is concerned).\n *\n * This contract is only required for intermediate, library-like contracts.\n */\nabstract contract Context {\n    function _msgSender() internal view virtual returns (address) {\n        return msg.sender;\n    }\n\n    function _msgData() internal view virtual returns (bytes calldata) {\n        return msg.data;\n    }\n}\n",
+<<<<<<< HEAD
   "sourcePath": "@openzeppelin\\contracts\\utils\\Context.sol",
+=======
+  "sourcePath": "@openzeppelin/contracts/utils/Context.sol",
+>>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
   "ast": {
     "absolutePath": "@openzeppelin/contracts/utils/Context.sol",
     "exportedSymbols": {
@@ -478,8 +482,13 @@
     "version": "0.8.6+commit.11564f7e.Emscripten.clang"
   },
   "networks": {},
+<<<<<<< HEAD
   "schemaVersion": "3.4.2",
   "updatedAt": "2021-08-06T20:34:32.442Z",
+=======
+  "schemaVersion": "3.4.1",
+  "updatedAt": "2021-08-06T10:00:35.069Z",
+>>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
   "devdoc": {
     "kind": "dev",
     "methods": {},
