@@ -153,11 +153,7 @@
       "type": "function"
     }
   ],
-<<<<<<< HEAD
-  "metadata": "{\"compiler\":{\"version\":\"0.8.6+commit.11564f7e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_title\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_description\",\"type\":\"string\"},{\"internalType\":\"uint128\",\"name\":\"_amount\",\"type\":\"uint128\"}],\"name\":\"createProposal\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"_proposalId\",\"type\":\"uint8\"}],\"name\":\"deleteProposal\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"enum IProposal.ProposalType\",\"name\":\"_proposalStatus\",\"type\":\"uint8\"}],\"name\":\"getProposals\",\"outputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"title\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"description\",\"type\":\"string\"},{\"internalType\":\"bool\",\"name\":\"accepted\",\"type\":\"bool\"},{\"internalType\":\"uint64\",\"name\":\"deadline\",\"type\":\"uint64\"},{\"internalType\":\"uint128\",\"name\":\"amount\",\"type\":\"uint128\"},{\"internalType\":\"uint128\",\"name\":\"okVotes\",\"type\":\"uint128\"},{\"internalType\":\"uint128\",\"name\":\"nokVotes\",\"type\":\"uint128\"},{\"internalType\":\"enum IProposal.ProposalType\",\"name\":\"proposalType\",\"type\":\"uint8\"},{\"internalType\":\"enum IProposal.WorkflowStatus\",\"name\":\"status\",\"type\":\"uint8\"}],\"internalType\":\"struct IProposal.Proposal[]\",\"name\":\"\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"_proposalId\",\"type\":\"uint8\"}],\"name\":\"getResults\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"_proposalId\",\"type\":\"uint8\"}],\"name\":\"startVotingSession\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"_proposalId\",\"type\":\"uint8\"},{\"internalType\":\"bool\",\"name\":\"_vote\",\"type\":\"bool\"}],\"name\":\"voteProposal\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Interface for the Proposal contract\",\"kind\":\"dev\",\"methods\":{\"createProposal(string,string,uint128)\":{\"details\":\"can only be called by campaign manager and if WorkflowStatus is Pending\",\"params\":{\"_amount\":\"The amount to be unlocked for spending\",\"_description\":\"The proposal description\",\"_title\":\"The proposal title\"}},\"deleteProposal(uint8)\":{\"details\":\"can only be called by campaign manager and if WorkflowStatus is Registered\",\"params\":{\"_proposalId\":\"The proposal's index inside the proposalList array\"}},\"getProposals(uint8)\":{\"params\":{\"_proposalStatus\":\"The proposalType (active, archived or deleted)\"},\"returns\":{\"_0\":\"Array The list of Proposals corresponding to the _proposalStatus\"}},\"getResults(uint8)\":{\"details\":\"can only be called only if proposal deadline is passed\",\"params\":{\"_proposalId\":\"The proposal's index inside the proposalList array\"}},\"startVotingSession(uint8)\":{\"details\":\"can only be called by campaign manager and if WorkflowStatus is Registered\",\"params\":{\"_proposalId\":\"The proposal's index inside the proposalList array\"}},\"voteProposal(uint8,bool)\":{\"details\":\"can only be called by contributors and if WorkflowStatus is VotingSessionStarted\",\"params\":{\"_proposalId\":\"The proposal's index inside the proposalList array\",\"_vote\":\"As 1 for ok and 0 for nok\"}}},\"title\":\"IProposal\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"createProposal(string,string,uint128)\":{\"notice\":\"Create a new proposal\"},\"deleteProposal(uint8)\":{\"notice\":\"Delete proposal\"},\"getProposals(uint8)\":{\"notice\":\"return list of proposal matching proposalType of param\"},\"getResults(uint8)\":{\"notice\":\"check if proposal is ok or nok\"},\"startVotingSession(uint8)\":{\"notice\":\"start proposal voting process\"},\"voteProposal(uint8,bool)\":{\"notice\":\"enable contributors to vote for or against proposal\"}},\"notice\":\"The Proposal contract handles all proposals submitted by campaign manager and votes by contributors\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/IProposal.sol\":\"IProposal\"},\"evmVersion\":\"berlin\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/IProposal.sol\":{\"keccak256\":\"0x8983b6543a0acd8ac1773897d7d6914e104064538b2ceea7a176b15bd9683552\",\"license\":\"GPL-3.0\",\"urls\":[\"bzz-raw://64a398a39cefe9e411eeeb6777808c80d76d4a6c7fae6d54c212059b1e785ad6\",\"dweb:/ipfs/QmYr3oeGCTU9MGVpr1JZpzKJWZ3WwjinWXiNtwbzdyRfDb\"]}},\"version\":1}",
-=======
-  "metadata": "{\"compiler\":{\"version\":\"0.8.6+commit.11564f7e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_title\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_description\",\"type\":\"string\"},{\"internalType\":\"uint128\",\"name\":\"_amount\",\"type\":\"uint128\"}],\"name\":\"createProposal\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"_proposalId\",\"type\":\"uint8\"}],\"name\":\"deleteProposal\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"enum IProposal.ProposalType\",\"name\":\"_proposalStatus\",\"type\":\"uint8\"}],\"name\":\"getProposals\",\"outputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"title\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"description\",\"type\":\"string\"},{\"internalType\":\"bool\",\"name\":\"accepted\",\"type\":\"bool\"},{\"internalType\":\"uint64\",\"name\":\"deadline\",\"type\":\"uint64\"},{\"internalType\":\"uint128\",\"name\":\"amount\",\"type\":\"uint128\"},{\"internalType\":\"uint128\",\"name\":\"okVotes\",\"type\":\"uint128\"},{\"internalType\":\"uint128\",\"name\":\"nokVotes\",\"type\":\"uint128\"},{\"internalType\":\"enum IProposal.ProposalType\",\"name\":\"proposalType\",\"type\":\"uint8\"},{\"internalType\":\"enum IProposal.WorkflowStatus\",\"name\":\"status\",\"type\":\"uint8\"}],\"internalType\":\"struct IProposal.Proposal[]\",\"name\":\"\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"_proposalId\",\"type\":\"uint8\"}],\"name\":\"getResults\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"_proposalId\",\"type\":\"uint8\"}],\"name\":\"startVotingSession\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"_proposalId\",\"type\":\"uint8\"},{\"internalType\":\"bool\",\"name\":\"_vote\",\"type\":\"bool\"}],\"name\":\"voteProposal\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Interface for the Proposal contract\",\"kind\":\"dev\",\"methods\":{\"createProposal(string,string,uint128)\":{\"details\":\"can only be called by campaign manager and if WorkflowStatus is Pending\",\"params\":{\"_amount\":\"The amount to be unlocked for spending\",\"_description\":\"The proposal description\",\"_title\":\"The proposal title\"}},\"deleteProposal(uint8)\":{\"details\":\"can only be called by campaign manager and if WorkflowStatus is Registered\",\"params\":{\"_proposalId\":\"The proposal's index inside the proposalList array\"}},\"getProposals(uint8)\":{\"params\":{\"_proposalStatus\":\"The proposalType (active, archived or deleted)\"},\"returns\":{\"_0\":\"Array The list of Proposals corresponding to the _proposalStatus\"}},\"getResults(uint8)\":{\"details\":\"can only be called only if proposal deadline is passed\",\"params\":{\"_proposalId\":\"The proposal's index inside the proposalList array\"}},\"startVotingSession(uint8)\":{\"details\":\"can only be called by campaign manager and if WorkflowStatus is Registered\",\"params\":{\"_proposalId\":\"The proposal's index inside the proposalList array\"}},\"voteProposal(uint8,bool)\":{\"details\":\"can only be called by contributors and if WorkflowStatus is VotingSessionStarted\",\"params\":{\"_proposalId\":\"The proposal's index inside the proposalList array\",\"_vote\":\"As 1 for ok and 0 for nok\"}}},\"title\":\"IProposal\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"createProposal(string,string,uint128)\":{\"notice\":\"Create a new proposal\"},\"deleteProposal(uint8)\":{\"notice\":\"Delete proposal\"},\"getProposals(uint8)\":{\"notice\":\"return list of proposal matching proposalType of param\"},\"getResults(uint8)\":{\"notice\":\"check if proposal is ok or nok\"},\"startVotingSession(uint8)\":{\"notice\":\"start proposal voting process\"},\"voteProposal(uint8,bool)\":{\"notice\":\"enable contributors to vote for or against proposal\"}},\"notice\":\"The Proposal contract handles all proposals submitted by campaign manager and votes by contributors\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/IProposal.sol\":\"IProposal\"},\"evmVersion\":\"berlin\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/IProposal.sol\":{\"keccak256\":\"0xf1c4d34c3d4e255664bf9d3b1e280f83bd783fe7c757eb73442da2c18a1019c0\",\"license\":\"GPL-3.0\",\"urls\":[\"bzz-raw://94a936d20c7dd985c5673f700fb41eb1044d8581a8be4202ab777d6a369888bd\",\"dweb:/ipfs/QmZyVBqT2xaFWV8YfKrkZpGUabrHSsVTMWqrqrCpYRPMJu\"]}},\"version\":1}",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+  "metadata": "{\"compiler\":{\"version\":\"0.8.6+commit.11564f7e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_title\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_description\",\"type\":\"string\"},{\"internalType\":\"uint128\",\"name\":\"_amount\",\"type\":\"uint128\"}],\"name\":\"createProposal\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"_proposalId\",\"type\":\"uint8\"}],\"name\":\"deleteProposal\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"enum IProposal.ProposalType\",\"name\":\"_proposalStatus\",\"type\":\"uint8\"}],\"name\":\"getProposals\",\"outputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"title\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"description\",\"type\":\"string\"},{\"internalType\":\"bool\",\"name\":\"accepted\",\"type\":\"bool\"},{\"internalType\":\"uint64\",\"name\":\"deadline\",\"type\":\"uint64\"},{\"internalType\":\"uint128\",\"name\":\"amount\",\"type\":\"uint128\"},{\"internalType\":\"uint128\",\"name\":\"okVotes\",\"type\":\"uint128\"},{\"internalType\":\"uint128\",\"name\":\"nokVotes\",\"type\":\"uint128\"},{\"internalType\":\"enum IProposal.ProposalType\",\"name\":\"proposalType\",\"type\":\"uint8\"},{\"internalType\":\"enum IProposal.WorkflowStatus\",\"name\":\"status\",\"type\":\"uint8\"}],\"internalType\":\"struct IProposal.Proposal[]\",\"name\":\"\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"_proposalId\",\"type\":\"uint8\"}],\"name\":\"getResults\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"_proposalId\",\"type\":\"uint8\"}],\"name\":\"startVotingSession\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"_proposalId\",\"type\":\"uint8\"},{\"internalType\":\"bool\",\"name\":\"_vote\",\"type\":\"bool\"}],\"name\":\"voteProposal\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Interface for the Proposal contract\",\"kind\":\"dev\",\"methods\":{\"createProposal(string,string,uint128)\":{\"details\":\"can only be called by campaign manager and if WorkflowStatus is Pending\",\"params\":{\"_amount\":\"The amount to be unlocked for spending\",\"_description\":\"The proposal description\",\"_title\":\"The proposal title\"}},\"deleteProposal(uint8)\":{\"details\":\"can only be called by campaign manager and if WorkflowStatus is Registered\",\"params\":{\"_proposalId\":\"The proposal's index inside the proposalList array\"}},\"getProposals(uint8)\":{\"params\":{\"_proposalStatus\":\"The proposalType (active, archived or deleted)\"},\"returns\":{\"_0\":\"Array The list of Proposals corresponding to the _proposalStatus\"}},\"getResults(uint8)\":{\"details\":\"can only be called only if proposal deadline is passed\",\"params\":{\"_proposalId\":\"The proposal's index inside the proposalList array\"}},\"startVotingSession(uint8)\":{\"details\":\"can only be called by campaign manager and if WorkflowStatus is Registered\",\"params\":{\"_proposalId\":\"The proposal's index inside the proposalList array\"}},\"voteProposal(uint8,bool)\":{\"details\":\"can only be called by contributors and if WorkflowStatus is VotingSessionStarted\",\"params\":{\"_proposalId\":\"The proposal's index inside the proposalList array\",\"_vote\":\"As 1 for ok and 0 for nok\"}}},\"title\":\"IProposal\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"createProposal(string,string,uint128)\":{\"notice\":\"Create a new proposal\"},\"deleteProposal(uint8)\":{\"notice\":\"Delete proposal\"},\"getProposals(uint8)\":{\"notice\":\"return list of proposal matching proposalType of param\"},\"getResults(uint8)\":{\"notice\":\"check if proposal is ok or nok\"},\"startVotingSession(uint8)\":{\"notice\":\"start proposal voting process\"},\"voteProposal(uint8,bool)\":{\"notice\":\"enable contributors to vote for or against proposal\"}},\"notice\":\"The Proposal contract handles all proposals submitted by campaign manager and votes by contributors\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"/A/Programing/Projet_Final/SparkUp/contracts/interfaces/IProposal.sol\":\"IProposal\"},\"evmVersion\":\"berlin\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/A/Programing/Projet_Final/SparkUp/contracts/interfaces/IProposal.sol\":{\"keccak256\":\"0x9a2135ef46d96d92fe5fbeb477df392b98e98b820e3b2830fe017f9b9a9082cd\",\"license\":\"GPL-3.0\",\"urls\":[\"bzz-raw://8a188b43cadaf8d0fd94efb310c425f102a083f4951220235a080baf4305215b\",\"dweb:/ipfs/QmWK9WgyJC4JLZbpShht4KK6Ws8XP8co1iKuCvrTS4dSNR\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "immutableReferences": {},
@@ -165,37 +161,29 @@
   "deployedGeneratedSources": [],
   "sourceMap": "",
   "deployedSourceMap": "",
-<<<<<<< HEAD
-  "source": "// SPDX-License-Identifier: GPL-3.0\r\npragma solidity 0.8.6;\r\n\r\n/**\r\n* @title IProposal\r\n* @notice The Proposal contract handles all proposals submitted by campaign manager and votes by contributors\r\n* @dev Interface for the Proposal contract\r\n*/\r\ninterface IProposal {\r\n\r\n    struct Proposal {\r\n        uint256 id;\r\n        string title;\r\n        string description;\r\n        bool accepted;\r\n        uint64 deadline;\r\n        uint128 amount;\r\n        uint128 okVotes;\r\n        uint128 nokVotes;\r\n        ProposalType proposalType;\r\n        WorkflowStatus status;\r\n    }\r\n\r\n    enum ProposalType{\r\n        Active,\r\n        Archived,\r\n        Deleted\r\n    }\r\n\r\n    enum WorkflowStatus {\r\n        Pending,\r\n        Registered,\r\n        VotingSessionStarted,\r\n        VotesTallied\r\n    }\r\n\r\n    /**\r\n     * @notice Create a new proposal\r\n     * @param _title The proposal title\r\n     * @param _description The proposal description\r\n     * @param _amount The amount to be unlocked for spending\r\n     * @dev can only be called by campaign manager and if WorkflowStatus is Pending\r\n     */\r\n    function createProposal(string memory _title, string memory _description, uint128 _amount) external;\r\n\r\n    /**\r\n     * @notice Delete proposal\r\n     * @param  _proposalId The proposal's index inside the proposalList array\r\n     * @dev can only be called by campaign manager and if WorkflowStatus is Registered\r\n     */\r\n    function deleteProposal(uint8 _proposalId) external;\r\n\r\n    /**\r\n     * @notice start proposal voting process\r\n     * @param _proposalId The proposal's index inside the proposalList array\r\n     * @dev can only be called by campaign manager and if WorkflowStatus is Registered\r\n     */\r\n    function startVotingSession(uint8 _proposalId) external;\r\n\r\n    /**\r\n     * @notice enable contributors to vote for or against proposal\r\n     * @param _proposalId The proposal's index inside the proposalList array\r\n     * @param _vote As 1 for ok and 0 for nok\r\n     * @dev can only be called by contributors and if WorkflowStatus is VotingSessionStarted\r\n     */\r\n    function voteProposal(uint8 _proposalId, bool _vote) external;\r\n\r\n    /**\r\n     * @notice check if proposal is ok or nok\r\n     * @param _proposalId The proposal's index inside the proposalList array\r\n     * @dev can only be called only if proposal deadline is passed\r\n     */\r\n    function getResults(uint8 _proposalId) external;\r\n\r\n    /**\r\n     * @notice return list of proposal matching proposalType of param\r\n     * @param _proposalStatus The proposalType (active, archived or deleted)\r\n     * @return Array The list of Proposals corresponding to the _proposalStatus\r\n     */\r\n    function getProposals(ProposalType _proposalStatus) external view returns(Proposal[] memory);\r\n\r\n}\r\n",
+  "source": "// SPDX-License-Identifier: GPL-3.0\r\npragma solidity ^0.8.6;\r\n\r\n/**\r\n* @title IProposal\r\n* @notice The Proposal contract handles all proposals submitted by campaign manager and votes by contributors\r\n* @dev Interface for the Proposal contract\r\n*/\r\ninterface IProposal {\r\n\r\n    struct Proposal {\r\n        uint256 id;\r\n        string title;\r\n        string description;\r\n        bool accepted;\r\n        uint64 deadline;\r\n        uint128 amount;\r\n        uint128 okVotes;\r\n        uint128 nokVotes;\r\n        ProposalType proposalType;\r\n        WorkflowStatus status;\r\n    }\r\n\r\n    enum ProposalType{\r\n        Active,\r\n        Archived,\r\n        Deleted\r\n    }\r\n\r\n    enum WorkflowStatus {\r\n        Pending,\r\n        Registered,\r\n        VotingSessionStarted,\r\n        VotesTallied\r\n    }\r\n\r\n    /**\r\n     * @notice Create a new proposal\r\n     * @param _title The proposal title\r\n     * @param _description The proposal description\r\n     * @param _amount The amount to be unlocked for spending\r\n     * @dev can only be called by campaign manager and if WorkflowStatus is Pending\r\n     */\r\n    function createProposal(string memory _title, string memory _description, uint128 _amount) external;\r\n\r\n    /**\r\n     * @notice Delete proposal\r\n     * @param  _proposalId The proposal's index inside the proposalList array\r\n     * @dev can only be called by campaign manager and if WorkflowStatus is Registered\r\n     */\r\n    function deleteProposal(uint8 _proposalId) external;\r\n\r\n    /**\r\n     * @notice start proposal voting process\r\n     * @param _proposalId The proposal's index inside the proposalList array\r\n     * @dev can only be called by campaign manager and if WorkflowStatus is Registered\r\n     */\r\n    function startVotingSession(uint8 _proposalId) external;\r\n\r\n    /**\r\n     * @notice enable contributors to vote for or against proposal\r\n     * @param _proposalId The proposal's index inside the proposalList array\r\n     * @param _vote As 1 for ok and 0 for nok\r\n     * @dev can only be called by contributors and if WorkflowStatus is VotingSessionStarted\r\n     */\r\n    function voteProposal(uint8 _proposalId, bool _vote) external;\r\n\r\n    /**\r\n     * @notice check if proposal is ok or nok\r\n     * @param _proposalId The proposal's index inside the proposalList array\r\n     * @dev can only be called only if proposal deadline is passed\r\n     */\r\n    function getResults(uint8 _proposalId) external;\r\n\r\n    /**\r\n     * @notice return list of proposal matching proposalType of param\r\n     * @param _proposalStatus The proposalType (active, archived or deleted)\r\n     * @return Array The list of Proposals corresponding to the _proposalStatus\r\n     */\r\n    function getProposals(ProposalType _proposalStatus) external view returns(Proposal[] memory);\r\n\r\n}\r\n",
   "sourcePath": "A:\\Programing\\Projet_Final\\SparkUp\\contracts\\interfaces\\IProposal.sol",
-=======
-  "source": "// SPDX-License-Identifier: GPL-3.0\npragma solidity 0.8.6;\n\n/**\n* @title IProposal\n* @notice The Proposal contract handles all proposals submitted by campaign manager and votes by contributors\n* @dev Interface for the Proposal contract\n*/\ninterface IProposal {\n\n    struct Proposal {\n        uint256 id;\n        string title;\n        string description;\n        bool accepted;\n        uint64 deadline;\n        uint128 amount;\n        uint128 okVotes;\n        uint128 nokVotes;\n        ProposalType proposalType;\n        WorkflowStatus status;\n    }\n\n    enum ProposalType{\n        Active,\n        Archived,\n        Deleted\n    }\n\n    enum WorkflowStatus {\n        Pending,\n        Registered,\n        VotingSessionStarted,\n        VotesTallied\n    }\n\n    /**\n     * @notice Create a new proposal\n     * @param _title The proposal title\n     * @param _description The proposal description\n     * @param _amount The amount to be unlocked for spending\n     * @dev can only be called by campaign manager and if WorkflowStatus is Pending\n     */\n    function createProposal(string memory _title, string memory _description, uint128 _amount) external;\n\n    /**\n     * @notice Delete proposal\n     * @param  _proposalId The proposal's index inside the proposalList array\n     * @dev can only be called by campaign manager and if WorkflowStatus is Registered\n     */\n    function deleteProposal(uint8 _proposalId) external;\n\n    /**\n     * @notice start proposal voting process\n     * @param _proposalId The proposal's index inside the proposalList array\n     * @dev can only be called by campaign manager and if WorkflowStatus is Registered\n     */\n    function startVotingSession(uint8 _proposalId) external;\n\n    /**\n     * @notice enable contributors to vote for or against proposal\n     * @param _proposalId The proposal's index inside the proposalList array\n     * @param _vote As 1 for ok and 0 for nok\n     * @dev can only be called by contributors and if WorkflowStatus is VotingSessionStarted\n     */\n    function voteProposal(uint8 _proposalId, bool _vote) external;\n\n    /**\n     * @notice check if proposal is ok or nok\n     * @param _proposalId The proposal's index inside the proposalList array\n     * @dev can only be called only if proposal deadline is passed\n     */\n    function getResults(uint8 _proposalId) external;\n\n    /**\n     * @notice return list of proposal matching proposalType of param\n     * @param _proposalStatus The proposalType (active, archived or deleted)\n     * @return Array The list of Proposals corresponding to the _proposalStatus\n     */\n    function getProposals(ProposalType _proposalStatus) external view returns(Proposal[] memory);\n\n}\n",
-  "sourcePath": "/Users/Xutyr/Documents/Lab/SparkUp/contracts/interfaces/IProposal.sol",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
   "ast": {
-    "absolutePath": "project:/contracts/interfaces/IProposal.sol",
+    "absolutePath": "/A/Programing/Projet_Final/SparkUp/contracts/interfaces/IProposal.sol",
     "exportedSymbols": {
       "IProposal": [
-        3536
+        2252
       ]
     },
-    "id": 3537,
+    "id": 2253,
     "license": "GPL-3.0",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 3455,
+        "id": 2171,
         "literals": [
           "solidity",
+          "^",
           "0.8",
           ".6"
         ],
         "nodeType": "PragmaDirective",
-<<<<<<< HEAD
-        "src": "37:22:15"
-=======
-        "src": "36:22:15"
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+        "src": "37:23:8"
       },
       {
         "abstract": false,
@@ -203,48 +191,33 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "documentation": {
-          "id": 3456,
+          "id": 2172,
           "nodeType": "StructuredDocumentation",
-<<<<<<< HEAD
-          "src": "63:182:15",
-=======
-          "src": "60:178:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+          "src": "64:182:8",
           "text": " @title IProposal\n @notice The Proposal contract handles all proposals submitted by campaign manager and votes by contributors\n @dev Interface for the Proposal contract"
         },
         "fullyImplemented": false,
-        "id": 3536,
+        "id": 2252,
         "linearizedBaseContracts": [
-          3536
+          2252
         ],
         "name": "IProposal",
-<<<<<<< HEAD
-        "nameLocation": "257:9:15",
-=======
-        "nameLocation": "249:9:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+        "nameLocation": "258:9:8",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "IProposal.Proposal",
-            "id": 3479,
+            "id": 2195,
             "members": [
               {
                 "constant": false,
-                "id": 3458,
+                "id": 2174,
                 "mutability": "mutable",
                 "name": "id",
-<<<<<<< HEAD
-                "nameLocation": "311:2:15",
+                "nameLocation": "312:2:8",
                 "nodeType": "VariableDeclaration",
-                "scope": 3479,
-                "src": "303:10:15",
-=======
-                "nameLocation": "300:2:15",
-                "nodeType": "VariableDeclaration",
-                "scope": 3479,
-                "src": "292:10:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                "scope": 2195,
+                "src": "304:10:8",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -252,14 +225,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3457,
+                  "id": 2173,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
-<<<<<<< HEAD
-                  "src": "303:7:15",
-=======
-                  "src": "292:7:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                  "src": "304:7:8",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -269,20 +238,13 @@
               },
               {
                 "constant": false,
-                "id": 3460,
+                "id": 2176,
                 "mutability": "mutable",
                 "name": "title",
-<<<<<<< HEAD
-                "nameLocation": "331:5:15",
+                "nameLocation": "332:5:8",
                 "nodeType": "VariableDeclaration",
-                "scope": 3479,
-                "src": "324:12:15",
-=======
-                "nameLocation": "319:5:15",
-                "nodeType": "VariableDeclaration",
-                "scope": 3479,
-                "src": "312:12:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                "scope": 2195,
+                "src": "325:12:8",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -290,14 +252,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 3459,
+                  "id": 2175,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-<<<<<<< HEAD
-                  "src": "324:6:15",
-=======
-                  "src": "312:6:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                  "src": "325:6:8",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -307,20 +265,13 @@
               },
               {
                 "constant": false,
-                "id": 3462,
+                "id": 2178,
                 "mutability": "mutable",
                 "name": "description",
-<<<<<<< HEAD
-                "nameLocation": "354:11:15",
+                "nameLocation": "355:11:8",
                 "nodeType": "VariableDeclaration",
-                "scope": 3479,
-                "src": "347:18:15",
-=======
-                "nameLocation": "341:11:15",
-                "nodeType": "VariableDeclaration",
-                "scope": 3479,
-                "src": "334:18:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                "scope": 2195,
+                "src": "348:18:8",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -328,14 +279,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 3461,
+                  "id": 2177,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-<<<<<<< HEAD
-                  "src": "347:6:15",
-=======
-                  "src": "334:6:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                  "src": "348:6:8",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -345,20 +292,13 @@
               },
               {
                 "constant": false,
-                "id": 3464,
+                "id": 2180,
                 "mutability": "mutable",
                 "name": "accepted",
-<<<<<<< HEAD
-                "nameLocation": "381:8:15",
+                "nameLocation": "382:8:8",
                 "nodeType": "VariableDeclaration",
-                "scope": 3479,
-                "src": "376:13:15",
-=======
-                "nameLocation": "367:8:15",
-                "nodeType": "VariableDeclaration",
-                "scope": 3479,
-                "src": "362:13:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                "scope": 2195,
+                "src": "377:13:8",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -366,14 +306,10 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 3463,
+                  "id": 2179,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
-<<<<<<< HEAD
-                  "src": "376:4:15",
-=======
-                  "src": "362:4:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                  "src": "377:4:8",
                   "typeDescriptions": {
                     "typeIdentifier": "t_bool",
                     "typeString": "bool"
@@ -383,20 +319,13 @@
               },
               {
                 "constant": false,
-                "id": 3466,
+                "id": 2182,
                 "mutability": "mutable",
                 "name": "deadline",
-<<<<<<< HEAD
-                "nameLocation": "407:8:15",
+                "nameLocation": "408:8:8",
                 "nodeType": "VariableDeclaration",
-                "scope": 3479,
-                "src": "400:15:15",
-=======
-                "nameLocation": "392:8:15",
-                "nodeType": "VariableDeclaration",
-                "scope": 3479,
-                "src": "385:15:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                "scope": 2195,
+                "src": "401:15:8",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -404,14 +333,10 @@
                   "typeString": "uint64"
                 },
                 "typeName": {
-                  "id": 3465,
+                  "id": 2181,
                   "name": "uint64",
                   "nodeType": "ElementaryTypeName",
-<<<<<<< HEAD
-                  "src": "400:6:15",
-=======
-                  "src": "385:6:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                  "src": "401:6:8",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint64",
                     "typeString": "uint64"
@@ -421,20 +346,13 @@
               },
               {
                 "constant": false,
-                "id": 3468,
+                "id": 2184,
                 "mutability": "mutable",
                 "name": "amount",
-<<<<<<< HEAD
-                "nameLocation": "434:6:15",
+                "nameLocation": "435:6:8",
                 "nodeType": "VariableDeclaration",
-                "scope": 3479,
-                "src": "426:14:15",
-=======
-                "nameLocation": "418:6:15",
-                "nodeType": "VariableDeclaration",
-                "scope": 3479,
-                "src": "410:14:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                "scope": 2195,
+                "src": "427:14:8",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -442,14 +360,10 @@
                   "typeString": "uint128"
                 },
                 "typeName": {
-                  "id": 3467,
+                  "id": 2183,
                   "name": "uint128",
                   "nodeType": "ElementaryTypeName",
-<<<<<<< HEAD
-                  "src": "426:7:15",
-=======
-                  "src": "410:7:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                  "src": "427:7:8",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint128",
                     "typeString": "uint128"
@@ -459,20 +373,13 @@
               },
               {
                 "constant": false,
-                "id": 3470,
+                "id": 2186,
                 "mutability": "mutable",
                 "name": "okVotes",
-<<<<<<< HEAD
-                "nameLocation": "459:7:15",
+                "nameLocation": "460:7:8",
                 "nodeType": "VariableDeclaration",
-                "scope": 3479,
-                "src": "451:15:15",
-=======
-                "nameLocation": "442:7:15",
-                "nodeType": "VariableDeclaration",
-                "scope": 3479,
-                "src": "434:15:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                "scope": 2195,
+                "src": "452:15:8",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -480,14 +387,10 @@
                   "typeString": "uint128"
                 },
                 "typeName": {
-                  "id": 3469,
+                  "id": 2185,
                   "name": "uint128",
                   "nodeType": "ElementaryTypeName",
-<<<<<<< HEAD
-                  "src": "451:7:15",
-=======
-                  "src": "434:7:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                  "src": "452:7:8",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint128",
                     "typeString": "uint128"
@@ -497,20 +400,13 @@
               },
               {
                 "constant": false,
-                "id": 3472,
+                "id": 2188,
                 "mutability": "mutable",
                 "name": "nokVotes",
-<<<<<<< HEAD
-                "nameLocation": "485:8:15",
+                "nameLocation": "486:8:8",
                 "nodeType": "VariableDeclaration",
-                "scope": 3479,
-                "src": "477:16:15",
-=======
-                "nameLocation": "467:8:15",
-                "nodeType": "VariableDeclaration",
-                "scope": 3479,
-                "src": "459:16:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                "scope": 2195,
+                "src": "478:16:8",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -518,14 +414,10 @@
                   "typeString": "uint128"
                 },
                 "typeName": {
-                  "id": 3471,
+                  "id": 2187,
                   "name": "uint128",
                   "nodeType": "ElementaryTypeName",
-<<<<<<< HEAD
-                  "src": "477:7:15",
-=======
-                  "src": "459:7:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                  "src": "478:7:8",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint128",
                     "typeString": "uint128"
@@ -535,47 +427,33 @@
               },
               {
                 "constant": false,
-                "id": 3475,
+                "id": 2191,
                 "mutability": "mutable",
                 "name": "proposalType",
-<<<<<<< HEAD
-                "nameLocation": "517:12:15",
+                "nameLocation": "518:12:8",
                 "nodeType": "VariableDeclaration",
-                "scope": 3479,
-                "src": "504:25:15",
-=======
-                "nameLocation": "498:12:15",
-                "nodeType": "VariableDeclaration",
-                "scope": 3479,
-                "src": "485:25:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                "scope": 2195,
+                "src": "505:25:8",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_enum$_ProposalType_$3483",
+                  "typeIdentifier": "t_enum$_ProposalType_$2199",
                   "typeString": "enum IProposal.ProposalType"
                 },
                 "typeName": {
-                  "id": 3474,
+                  "id": 2190,
                   "nodeType": "UserDefinedTypeName",
                   "pathNode": {
-                    "id": 3473,
+                    "id": 2189,
                     "name": "ProposalType",
                     "nodeType": "IdentifierPath",
-                    "referencedDeclaration": 3483,
-<<<<<<< HEAD
-                    "src": "504:12:15"
+                    "referencedDeclaration": 2199,
+                    "src": "505:12:8"
                   },
-                  "referencedDeclaration": 3483,
-                  "src": "504:12:15",
-=======
-                    "src": "485:12:15"
-                  },
-                  "referencedDeclaration": 3483,
-                  "src": "485:12:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                  "referencedDeclaration": 2199,
+                  "src": "505:12:8",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_ProposalType_$3483",
+                    "typeIdentifier": "t_enum$_ProposalType_$2199",
                     "typeString": "enum IProposal.ProposalType"
                   }
                 },
@@ -583,47 +461,33 @@
               },
               {
                 "constant": false,
-                "id": 3478,
+                "id": 2194,
                 "mutability": "mutable",
                 "name": "status",
-<<<<<<< HEAD
-                "nameLocation": "555:6:15",
+                "nameLocation": "556:6:8",
                 "nodeType": "VariableDeclaration",
-                "scope": 3479,
-                "src": "540:21:15",
-=======
-                "nameLocation": "535:6:15",
-                "nodeType": "VariableDeclaration",
-                "scope": 3479,
-                "src": "520:21:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                "scope": 2195,
+                "src": "541:21:8",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_enum$_WorkflowStatus_$3488",
+                  "typeIdentifier": "t_enum$_WorkflowStatus_$2204",
                   "typeString": "enum IProposal.WorkflowStatus"
                 },
                 "typeName": {
-                  "id": 3477,
+                  "id": 2193,
                   "nodeType": "UserDefinedTypeName",
                   "pathNode": {
-                    "id": 3476,
+                    "id": 2192,
                     "name": "WorkflowStatus",
                     "nodeType": "IdentifierPath",
-                    "referencedDeclaration": 3488,
-<<<<<<< HEAD
-                    "src": "540:14:15"
+                    "referencedDeclaration": 2204,
+                    "src": "541:14:8"
                   },
-                  "referencedDeclaration": 3488,
-                  "src": "540:14:15",
-=======
-                    "src": "520:14:15"
-                  },
-                  "referencedDeclaration": 3488,
-                  "src": "520:14:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                  "referencedDeclaration": 2204,
+                  "src": "541:14:8",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_WorkflowStatus_$3488",
+                    "typeIdentifier": "t_enum$_WorkflowStatus_$2204",
                     "typeString": "enum IProposal.WorkflowStatus"
                   }
                 },
@@ -631,185 +495,109 @@
               }
             ],
             "name": "Proposal",
-<<<<<<< HEAD
-            "nameLocation": "283:8:15",
+            "nameLocation": "284:8:8",
             "nodeType": "StructDefinition",
-            "scope": 3536,
-            "src": "276:293:15",
-=======
-            "nameLocation": "273:8:15",
-            "nodeType": "StructDefinition",
-            "scope": 3536,
-            "src": "266:282:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+            "scope": 2252,
+            "src": "277:293:8",
             "visibility": "public"
           },
           {
             "canonicalName": "IProposal.ProposalType",
-            "id": 3483,
+            "id": 2199,
             "members": [
               {
-                "id": 3480,
+                "id": 2196,
                 "name": "Active",
-<<<<<<< HEAD
-                "nameLocation": "605:6:15",
+                "nameLocation": "606:6:8",
                 "nodeType": "EnumValue",
-                "src": "605:6:15"
-=======
-                "nameLocation": "581:6:15",
-                "nodeType": "EnumValue",
-                "src": "581:6:15"
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                "src": "606:6:8"
               },
               {
-                "id": 3481,
+                "id": 2197,
                 "name": "Archived",
-<<<<<<< HEAD
-                "nameLocation": "622:8:15",
+                "nameLocation": "623:8:8",
                 "nodeType": "EnumValue",
-                "src": "622:8:15"
-=======
-                "nameLocation": "597:8:15",
-                "nodeType": "EnumValue",
-                "src": "597:8:15"
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                "src": "623:8:8"
               },
               {
-                "id": 3482,
+                "id": 2198,
                 "name": "Deleted",
-<<<<<<< HEAD
-                "nameLocation": "641:7:15",
+                "nameLocation": "642:7:8",
                 "nodeType": "EnumValue",
-                "src": "641:7:15"
+                "src": "642:7:8"
               }
             ],
             "name": "ProposalType",
-            "nameLocation": "582:12:15",
+            "nameLocation": "583:12:8",
             "nodeType": "EnumDefinition",
-            "src": "577:78:15"
-=======
-                "nameLocation": "615:7:15",
-                "nodeType": "EnumValue",
-                "src": "615:7:15"
-              }
-            ],
-            "name": "ProposalType",
-            "nameLocation": "559:12:15",
-            "nodeType": "EnumDefinition",
-            "src": "554:74:15"
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+            "src": "578:78:8"
           },
           {
             "canonicalName": "IProposal.WorkflowStatus",
-            "id": 3488,
+            "id": 2204,
             "members": [
               {
-                "id": 3484,
+                "id": 2200,
                 "name": "Pending",
-<<<<<<< HEAD
-                "nameLocation": "694:7:15",
+                "nameLocation": "695:7:8",
                 "nodeType": "EnumValue",
-                "src": "694:7:15"
-=======
-                "nameLocation": "664:7:15",
-                "nodeType": "EnumValue",
-                "src": "664:7:15"
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                "src": "695:7:8"
               },
               {
-                "id": 3485,
+                "id": 2201,
                 "name": "Registered",
-<<<<<<< HEAD
-                "nameLocation": "712:10:15",
+                "nameLocation": "713:10:8",
                 "nodeType": "EnumValue",
-                "src": "712:10:15"
-=======
-                "nameLocation": "681:10:15",
-                "nodeType": "EnumValue",
-                "src": "681:10:15"
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                "src": "713:10:8"
               },
               {
-                "id": 3486,
+                "id": 2202,
                 "name": "VotingSessionStarted",
-<<<<<<< HEAD
-                "nameLocation": "733:20:15",
+                "nameLocation": "734:20:8",
                 "nodeType": "EnumValue",
-                "src": "733:20:15"
-=======
-                "nameLocation": "701:20:15",
-                "nodeType": "EnumValue",
-                "src": "701:20:15"
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                "src": "734:20:8"
               },
               {
-                "id": 3487,
+                "id": 2203,
                 "name": "VotesTallied",
-<<<<<<< HEAD
-                "nameLocation": "764:12:15",
+                "nameLocation": "765:12:8",
                 "nodeType": "EnumValue",
-                "src": "764:12:15"
+                "src": "765:12:8"
               }
             ],
             "name": "WorkflowStatus",
-            "nameLocation": "668:14:15",
+            "nameLocation": "669:14:8",
             "nodeType": "EnumDefinition",
-            "src": "663:120:15"
-=======
-                "nameLocation": "731:12:15",
-                "nodeType": "EnumValue",
-                "src": "731:12:15"
-              }
-            ],
-            "name": "WorkflowStatus",
-            "nameLocation": "639:14:15",
-            "nodeType": "EnumDefinition",
-            "src": "634:115:15"
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+            "src": "664:120:8"
           },
           {
             "documentation": {
-              "id": 3489,
+              "id": 2205,
               "nodeType": "StructuredDocumentation",
-<<<<<<< HEAD
-              "src": "791:291:15",
-=======
-              "src": "755:285:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+              "src": "792:291:8",
               "text": " @notice Create a new proposal\n @param _title The proposal title\n @param _description The proposal description\n @param _amount The amount to be unlocked for spending\n @dev can only be called by campaign manager and if WorkflowStatus is Pending"
             },
             "functionSelector": "5cbd4d05",
-            "id": 3498,
+            "id": 2214,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "createProposal",
-<<<<<<< HEAD
-            "nameLocation": "1097:14:15",
-=======
-            "nameLocation": "1054:14:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+            "nameLocation": "1098:14:8",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3496,
+              "id": 2212,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3491,
+                  "id": 2207,
                   "mutability": "mutable",
                   "name": "_title",
-<<<<<<< HEAD
-                  "nameLocation": "1126:6:15",
+                  "nameLocation": "1127:6:8",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3498,
-                  "src": "1112:20:15",
-=======
-                  "nameLocation": "1083:6:15",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 3498,
-                  "src": "1069:20:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                  "scope": 2214,
+                  "src": "1113:20:8",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -817,14 +605,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 3490,
+                    "id": 2206,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-<<<<<<< HEAD
-                    "src": "1112:6:15",
-=======
-                    "src": "1069:6:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                    "src": "1113:6:8",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -834,20 +618,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 3493,
+                  "id": 2209,
                   "mutability": "mutable",
                   "name": "_description",
-<<<<<<< HEAD
-                  "nameLocation": "1148:12:15",
+                  "nameLocation": "1149:12:8",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3498,
-                  "src": "1134:26:15",
-=======
-                  "nameLocation": "1105:12:15",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 3498,
-                  "src": "1091:26:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                  "scope": 2214,
+                  "src": "1135:26:8",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -855,14 +632,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 3492,
+                    "id": 2208,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-<<<<<<< HEAD
-                    "src": "1134:6:15",
-=======
-                    "src": "1091:6:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                    "src": "1135:6:8",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -872,20 +645,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 3495,
+                  "id": 2211,
                   "mutability": "mutable",
                   "name": "_amount",
-<<<<<<< HEAD
-                  "nameLocation": "1170:7:15",
+                  "nameLocation": "1171:7:8",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3498,
-                  "src": "1162:15:15",
-=======
-                  "nameLocation": "1127:7:15",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 3498,
-                  "src": "1119:15:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                  "scope": 2214,
+                  "src": "1163:15:8",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -893,14 +659,10 @@
                     "typeString": "uint128"
                   },
                   "typeName": {
-                    "id": 3494,
+                    "id": 2210,
                     "name": "uint128",
                     "nodeType": "ElementaryTypeName",
-<<<<<<< HEAD
-                    "src": "1162:7:15",
-=======
-                    "src": "1119:7:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                    "src": "1163:7:8",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint128",
                       "typeString": "uint128"
@@ -909,74 +671,48 @@
                   "visibility": "internal"
                 }
               ],
-<<<<<<< HEAD
-              "src": "1111:67:15"
-=======
-              "src": "1068:67:15"
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+              "src": "1112:67:8"
             },
             "returnParameters": {
-              "id": 3497,
+              "id": 2213,
               "nodeType": "ParameterList",
               "parameters": [],
-<<<<<<< HEAD
-              "src": "1187:0:15"
+              "src": "1188:0:8"
             },
-            "scope": 3536,
-            "src": "1088:100:15",
-=======
-              "src": "1144:0:15"
-            },
-            "scope": 3536,
-            "src": "1045:100:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+            "scope": 2252,
+            "src": "1089:100:8",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
             "documentation": {
-              "id": 3499,
+              "id": 2215,
               "nodeType": "StructuredDocumentation",
-<<<<<<< HEAD
-              "src": "1196:211:15",
-=======
-              "src": "1151:207:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+              "src": "1197:211:8",
               "text": " @notice Delete proposal\n @param  _proposalId The proposal's index inside the proposalList array\n @dev can only be called by campaign manager and if WorkflowStatus is Registered"
             },
             "functionSelector": "34bdcdd7",
-            "id": 3504,
+            "id": 2220,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "deleteProposal",
-<<<<<<< HEAD
-            "nameLocation": "1422:14:15",
-=======
-            "nameLocation": "1372:14:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+            "nameLocation": "1423:14:8",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3502,
+              "id": 2218,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3501,
+                  "id": 2217,
                   "mutability": "mutable",
                   "name": "_proposalId",
-<<<<<<< HEAD
-                  "nameLocation": "1443:11:15",
+                  "nameLocation": "1444:11:8",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3504,
-                  "src": "1437:17:15",
-=======
-                  "nameLocation": "1393:11:15",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 3504,
-                  "src": "1387:17:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                  "scope": 2220,
+                  "src": "1438:17:8",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -984,14 +720,10 @@
                     "typeString": "uint8"
                   },
                   "typeName": {
-                    "id": 3500,
+                    "id": 2216,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
-<<<<<<< HEAD
-                    "src": "1437:5:15",
-=======
-                    "src": "1387:5:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                    "src": "1438:5:8",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint8",
                       "typeString": "uint8"
@@ -1000,74 +732,48 @@
                   "visibility": "internal"
                 }
               ],
-<<<<<<< HEAD
-              "src": "1436:19:15"
-=======
-              "src": "1386:19:15"
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+              "src": "1437:19:8"
             },
             "returnParameters": {
-              "id": 3503,
+              "id": 2219,
               "nodeType": "ParameterList",
               "parameters": [],
-<<<<<<< HEAD
-              "src": "1464:0:15"
+              "src": "1465:0:8"
             },
-            "scope": 3536,
-            "src": "1413:52:15",
-=======
-              "src": "1414:0:15"
-            },
-            "scope": 3536,
-            "src": "1363:52:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+            "scope": 2252,
+            "src": "1414:52:8",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
             "documentation": {
-              "id": 3505,
+              "id": 2221,
               "nodeType": "StructuredDocumentation",
-<<<<<<< HEAD
-              "src": "1473:224:15",
-=======
-              "src": "1421:220:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+              "src": "1474:224:8",
               "text": " @notice start proposal voting process\n @param _proposalId The proposal's index inside the proposalList array\n @dev can only be called by campaign manager and if WorkflowStatus is Registered"
             },
             "functionSelector": "05f86040",
-            "id": 3510,
+            "id": 2226,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "startVotingSession",
-<<<<<<< HEAD
-            "nameLocation": "1712:18:15",
-=======
-            "nameLocation": "1655:18:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+            "nameLocation": "1713:18:8",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3508,
+              "id": 2224,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3507,
+                  "id": 2223,
                   "mutability": "mutable",
                   "name": "_proposalId",
-<<<<<<< HEAD
-                  "nameLocation": "1737:11:15",
+                  "nameLocation": "1738:11:8",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3510,
-                  "src": "1731:17:15",
-=======
-                  "nameLocation": "1680:11:15",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 3510,
-                  "src": "1674:17:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                  "scope": 2226,
+                  "src": "1732:17:8",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1075,14 +781,10 @@
                     "typeString": "uint8"
                   },
                   "typeName": {
-                    "id": 3506,
+                    "id": 2222,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
-<<<<<<< HEAD
-                    "src": "1731:5:15",
-=======
-                    "src": "1674:5:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                    "src": "1732:5:8",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint8",
                       "typeString": "uint8"
@@ -1091,74 +793,48 @@
                   "visibility": "internal"
                 }
               ],
-<<<<<<< HEAD
-              "src": "1730:19:15"
-=======
-              "src": "1673:19:15"
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+              "src": "1731:19:8"
             },
             "returnParameters": {
-              "id": 3509,
+              "id": 2225,
               "nodeType": "ParameterList",
               "parameters": [],
-<<<<<<< HEAD
-              "src": "1758:0:15"
+              "src": "1759:0:8"
             },
-            "scope": 3536,
-            "src": "1703:56:15",
-=======
-              "src": "1701:0:15"
-            },
-            "scope": 3536,
-            "src": "1646:56:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+            "scope": 2252,
+            "src": "1704:56:8",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
             "documentation": {
-              "id": 3511,
+              "id": 2227,
               "nodeType": "StructuredDocumentation",
-<<<<<<< HEAD
-              "src": "1767:299:15",
-=======
-              "src": "1708:294:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+              "src": "1768:299:8",
               "text": " @notice enable contributors to vote for or against proposal\n @param _proposalId The proposal's index inside the proposalList array\n @param _vote As 1 for ok and 0 for nok\n @dev can only be called by contributors and if WorkflowStatus is VotingSessionStarted"
             },
             "functionSelector": "fe48e8b1",
-            "id": 3518,
+            "id": 2234,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "voteProposal",
-<<<<<<< HEAD
-            "nameLocation": "2081:12:15",
-=======
-            "nameLocation": "2016:12:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+            "nameLocation": "2082:12:8",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3516,
+              "id": 2232,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3513,
+                  "id": 2229,
                   "mutability": "mutable",
                   "name": "_proposalId",
-<<<<<<< HEAD
-                  "nameLocation": "2100:11:15",
+                  "nameLocation": "2101:11:8",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3518,
-                  "src": "2094:17:15",
-=======
-                  "nameLocation": "2035:11:15",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 3518,
-                  "src": "2029:17:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                  "scope": 2234,
+                  "src": "2095:17:8",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1166,14 +842,10 @@
                     "typeString": "uint8"
                   },
                   "typeName": {
-                    "id": 3512,
+                    "id": 2228,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
-<<<<<<< HEAD
-                    "src": "2094:5:15",
-=======
-                    "src": "2029:5:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                    "src": "2095:5:8",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint8",
                       "typeString": "uint8"
@@ -1183,20 +855,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 3515,
+                  "id": 2231,
                   "mutability": "mutable",
                   "name": "_vote",
-<<<<<<< HEAD
-                  "nameLocation": "2118:5:15",
+                  "nameLocation": "2119:5:8",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3518,
-                  "src": "2113:10:15",
-=======
-                  "nameLocation": "2053:5:15",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 3518,
-                  "src": "2048:10:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                  "scope": 2234,
+                  "src": "2114:10:8",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1204,14 +869,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 3514,
+                    "id": 2230,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-<<<<<<< HEAD
-                    "src": "2113:4:15",
-=======
-                    "src": "2048:4:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                    "src": "2114:4:8",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -1220,74 +881,48 @@
                   "visibility": "internal"
                 }
               ],
-<<<<<<< HEAD
-              "src": "2093:31:15"
-=======
-              "src": "2028:31:15"
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+              "src": "2094:31:8"
             },
             "returnParameters": {
-              "id": 3517,
+              "id": 2233,
               "nodeType": "ParameterList",
               "parameters": [],
-<<<<<<< HEAD
-              "src": "2133:0:15"
+              "src": "2134:0:8"
             },
-            "scope": 3536,
-            "src": "2072:62:15",
-=======
-              "src": "2068:0:15"
-            },
-            "scope": 3536,
-            "src": "2007:62:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+            "scope": 2252,
+            "src": "2073:62:8",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
             "documentation": {
-              "id": 3519,
+              "id": 2235,
               "nodeType": "StructuredDocumentation",
-<<<<<<< HEAD
-              "src": "2142:205:15",
-=======
-              "src": "2075:201:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+              "src": "2143:205:8",
               "text": " @notice check if proposal is ok or nok\n @param _proposalId The proposal's index inside the proposalList array\n @dev can only be called only if proposal deadline is passed"
             },
             "functionSelector": "21686945",
-            "id": 3524,
+            "id": 2240,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getResults",
-<<<<<<< HEAD
-            "nameLocation": "2362:10:15",
-=======
-            "nameLocation": "2290:10:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+            "nameLocation": "2363:10:8",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3522,
+              "id": 2238,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3521,
+                  "id": 2237,
                   "mutability": "mutable",
                   "name": "_proposalId",
-<<<<<<< HEAD
-                  "nameLocation": "2379:11:15",
+                  "nameLocation": "2380:11:8",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3524,
-                  "src": "2373:17:15",
-=======
-                  "nameLocation": "2307:11:15",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 3524,
-                  "src": "2301:17:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                  "scope": 2240,
+                  "src": "2374:17:8",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1295,14 +930,10 @@
                     "typeString": "uint8"
                   },
                   "typeName": {
-                    "id": 3520,
+                    "id": 2236,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
-<<<<<<< HEAD
-                    "src": "2373:5:15",
-=======
-                    "src": "2301:5:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                    "src": "2374:5:8",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint8",
                       "typeString": "uint8"
@@ -1311,231 +942,161 @@
                   "visibility": "internal"
                 }
               ],
-<<<<<<< HEAD
-              "src": "2372:19:15"
-=======
-              "src": "2300:19:15"
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+              "src": "2373:19:8"
             },
             "returnParameters": {
-              "id": 3523,
+              "id": 2239,
               "nodeType": "ParameterList",
               "parameters": [],
-<<<<<<< HEAD
-              "src": "2400:0:15"
+              "src": "2401:0:8"
             },
-            "scope": 3536,
-            "src": "2353:48:15",
-=======
-              "src": "2328:0:15"
-            },
-            "scope": 3536,
-            "src": "2281:48:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+            "scope": 2252,
+            "src": "2354:48:8",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
             "documentation": {
-              "id": 3525,
+              "id": 2241,
               "nodeType": "StructuredDocumentation",
-<<<<<<< HEAD
-              "src": "2409:242:15",
-=======
-              "src": "2335:238:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+              "src": "2410:242:8",
               "text": " @notice return list of proposal matching proposalType of param\n @param _proposalStatus The proposalType (active, archived or deleted)\n @return Array The list of Proposals corresponding to the _proposalStatus"
             },
             "functionSelector": "4caae8a0",
-            "id": 3535,
+            "id": 2251,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getProposals",
-<<<<<<< HEAD
-            "nameLocation": "2666:12:15",
-=======
-            "nameLocation": "2587:12:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+            "nameLocation": "2667:12:8",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3529,
+              "id": 2245,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3528,
+                  "id": 2244,
                   "mutability": "mutable",
                   "name": "_proposalStatus",
-<<<<<<< HEAD
-                  "nameLocation": "2692:15:15",
+                  "nameLocation": "2693:15:8",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3535,
-                  "src": "2679:28:15",
-=======
-                  "nameLocation": "2613:15:15",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 3535,
-                  "src": "2600:28:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                  "scope": 2251,
+                  "src": "2680:28:8",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_ProposalType_$3483",
+                    "typeIdentifier": "t_enum$_ProposalType_$2199",
                     "typeString": "enum IProposal.ProposalType"
                   },
                   "typeName": {
-                    "id": 3527,
+                    "id": 2243,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 3526,
+                      "id": 2242,
                       "name": "ProposalType",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 3483,
-<<<<<<< HEAD
-                      "src": "2679:12:15"
+                      "referencedDeclaration": 2199,
+                      "src": "2680:12:8"
                     },
-                    "referencedDeclaration": 3483,
-                    "src": "2679:12:15",
-=======
-                      "src": "2600:12:15"
-                    },
-                    "referencedDeclaration": 3483,
-                    "src": "2600:12:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                    "referencedDeclaration": 2199,
+                    "src": "2680:12:8",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_ProposalType_$3483",
+                      "typeIdentifier": "t_enum$_ProposalType_$2199",
                       "typeString": "enum IProposal.ProposalType"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-<<<<<<< HEAD
-              "src": "2678:30:15"
-=======
-              "src": "2599:30:15"
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+              "src": "2679:30:8"
             },
             "returnParameters": {
-              "id": 3534,
+              "id": 2250,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3533,
+                  "id": 2249,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3535,
-<<<<<<< HEAD
-                  "src": "2731:17:15",
-=======
-                  "src": "2652:17:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                  "scope": 2251,
+                  "src": "2732:17:8",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_Proposal_$3479_memory_ptr_$dyn_memory_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_Proposal_$2195_memory_ptr_$dyn_memory_ptr",
                     "typeString": "struct IProposal.Proposal[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 3531,
+                      "id": 2247,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 3530,
+                        "id": 2246,
                         "name": "Proposal",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 3479,
-<<<<<<< HEAD
-                        "src": "2731:8:15"
+                        "referencedDeclaration": 2195,
+                        "src": "2732:8:8"
                       },
-                      "referencedDeclaration": 3479,
-                      "src": "2731:8:15",
-=======
-                        "src": "2652:8:15"
-                      },
-                      "referencedDeclaration": 3479,
-                      "src": "2652:8:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                      "referencedDeclaration": 2195,
+                      "src": "2732:8:8",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Proposal_$3479_storage_ptr",
+                        "typeIdentifier": "t_struct$_Proposal_$2195_storage_ptr",
                         "typeString": "struct IProposal.Proposal"
                       }
                     },
-                    "id": 3532,
+                    "id": 2248,
                     "nodeType": "ArrayTypeName",
-<<<<<<< HEAD
-                    "src": "2731:10:15",
-=======
-                    "src": "2652:10:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                    "src": "2732:10:8",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_Proposal_$3479_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_Proposal_$2195_storage_$dyn_storage_ptr",
                       "typeString": "struct IProposal.Proposal[]"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-<<<<<<< HEAD
-              "src": "2730:19:15"
+              "src": "2731:19:8"
             },
-            "scope": 3536,
-            "src": "2657:93:15",
-=======
-              "src": "2651:19:15"
-            },
-            "scope": 3536,
-            "src": "2578:93:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+            "scope": 2252,
+            "src": "2658:93:8",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 3537,
-<<<<<<< HEAD
-        "src": "247:2508:15",
+        "scope": 2253,
+        "src": "248:2508:8",
         "usedErrors": []
       }
     ],
-    "src": "37:2720:15"
-=======
-        "src": "239:2435:15",
-        "usedErrors": []
-      }
-    ],
-    "src": "36:2639:15"
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+    "src": "37:2721:8"
   },
   "legacyAST": {
-    "absolutePath": "project:/contracts/interfaces/IProposal.sol",
+    "absolutePath": "/A/Programing/Projet_Final/SparkUp/contracts/interfaces/IProposal.sol",
     "exportedSymbols": {
       "IProposal": [
-        3536
+        2252
       ]
     },
-    "id": 3537,
+    "id": 2253,
     "license": "GPL-3.0",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 3455,
+        "id": 2171,
         "literals": [
           "solidity",
+          "^",
           "0.8",
           ".6"
         ],
         "nodeType": "PragmaDirective",
-<<<<<<< HEAD
-        "src": "37:22:15"
-=======
-        "src": "36:22:15"
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+        "src": "37:23:8"
       },
       {
         "abstract": false,
@@ -1543,48 +1104,33 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "documentation": {
-          "id": 3456,
+          "id": 2172,
           "nodeType": "StructuredDocumentation",
-<<<<<<< HEAD
-          "src": "63:182:15",
-=======
-          "src": "60:178:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+          "src": "64:182:8",
           "text": " @title IProposal\n @notice The Proposal contract handles all proposals submitted by campaign manager and votes by contributors\n @dev Interface for the Proposal contract"
         },
         "fullyImplemented": false,
-        "id": 3536,
+        "id": 2252,
         "linearizedBaseContracts": [
-          3536
+          2252
         ],
         "name": "IProposal",
-<<<<<<< HEAD
-        "nameLocation": "257:9:15",
-=======
-        "nameLocation": "249:9:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+        "nameLocation": "258:9:8",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "IProposal.Proposal",
-            "id": 3479,
+            "id": 2195,
             "members": [
               {
                 "constant": false,
-                "id": 3458,
+                "id": 2174,
                 "mutability": "mutable",
                 "name": "id",
-<<<<<<< HEAD
-                "nameLocation": "311:2:15",
+                "nameLocation": "312:2:8",
                 "nodeType": "VariableDeclaration",
-                "scope": 3479,
-                "src": "303:10:15",
-=======
-                "nameLocation": "300:2:15",
-                "nodeType": "VariableDeclaration",
-                "scope": 3479,
-                "src": "292:10:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                "scope": 2195,
+                "src": "304:10:8",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -1592,14 +1138,10 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 3457,
+                  "id": 2173,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
-<<<<<<< HEAD
-                  "src": "303:7:15",
-=======
-                  "src": "292:7:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                  "src": "304:7:8",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -1609,20 +1151,13 @@
               },
               {
                 "constant": false,
-                "id": 3460,
+                "id": 2176,
                 "mutability": "mutable",
                 "name": "title",
-<<<<<<< HEAD
-                "nameLocation": "331:5:15",
+                "nameLocation": "332:5:8",
                 "nodeType": "VariableDeclaration",
-                "scope": 3479,
-                "src": "324:12:15",
-=======
-                "nameLocation": "319:5:15",
-                "nodeType": "VariableDeclaration",
-                "scope": 3479,
-                "src": "312:12:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                "scope": 2195,
+                "src": "325:12:8",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -1630,14 +1165,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 3459,
+                  "id": 2175,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-<<<<<<< HEAD
-                  "src": "324:6:15",
-=======
-                  "src": "312:6:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                  "src": "325:6:8",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -1647,20 +1178,13 @@
               },
               {
                 "constant": false,
-                "id": 3462,
+                "id": 2178,
                 "mutability": "mutable",
                 "name": "description",
-<<<<<<< HEAD
-                "nameLocation": "354:11:15",
+                "nameLocation": "355:11:8",
                 "nodeType": "VariableDeclaration",
-                "scope": 3479,
-                "src": "347:18:15",
-=======
-                "nameLocation": "341:11:15",
-                "nodeType": "VariableDeclaration",
-                "scope": 3479,
-                "src": "334:18:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                "scope": 2195,
+                "src": "348:18:8",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -1668,14 +1192,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 3461,
+                  "id": 2177,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-<<<<<<< HEAD
-                  "src": "347:6:15",
-=======
-                  "src": "334:6:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                  "src": "348:6:8",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -1685,20 +1205,13 @@
               },
               {
                 "constant": false,
-                "id": 3464,
+                "id": 2180,
                 "mutability": "mutable",
                 "name": "accepted",
-<<<<<<< HEAD
-                "nameLocation": "381:8:15",
+                "nameLocation": "382:8:8",
                 "nodeType": "VariableDeclaration",
-                "scope": 3479,
-                "src": "376:13:15",
-=======
-                "nameLocation": "367:8:15",
-                "nodeType": "VariableDeclaration",
-                "scope": 3479,
-                "src": "362:13:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                "scope": 2195,
+                "src": "377:13:8",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -1706,14 +1219,10 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 3463,
+                  "id": 2179,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
-<<<<<<< HEAD
-                  "src": "376:4:15",
-=======
-                  "src": "362:4:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                  "src": "377:4:8",
                   "typeDescriptions": {
                     "typeIdentifier": "t_bool",
                     "typeString": "bool"
@@ -1723,20 +1232,13 @@
               },
               {
                 "constant": false,
-                "id": 3466,
+                "id": 2182,
                 "mutability": "mutable",
                 "name": "deadline",
-<<<<<<< HEAD
-                "nameLocation": "407:8:15",
+                "nameLocation": "408:8:8",
                 "nodeType": "VariableDeclaration",
-                "scope": 3479,
-                "src": "400:15:15",
-=======
-                "nameLocation": "392:8:15",
-                "nodeType": "VariableDeclaration",
-                "scope": 3479,
-                "src": "385:15:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                "scope": 2195,
+                "src": "401:15:8",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -1744,14 +1246,10 @@
                   "typeString": "uint64"
                 },
                 "typeName": {
-                  "id": 3465,
+                  "id": 2181,
                   "name": "uint64",
                   "nodeType": "ElementaryTypeName",
-<<<<<<< HEAD
-                  "src": "400:6:15",
-=======
-                  "src": "385:6:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                  "src": "401:6:8",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint64",
                     "typeString": "uint64"
@@ -1761,20 +1259,13 @@
               },
               {
                 "constant": false,
-                "id": 3468,
+                "id": 2184,
                 "mutability": "mutable",
                 "name": "amount",
-<<<<<<< HEAD
-                "nameLocation": "434:6:15",
+                "nameLocation": "435:6:8",
                 "nodeType": "VariableDeclaration",
-                "scope": 3479,
-                "src": "426:14:15",
-=======
-                "nameLocation": "418:6:15",
-                "nodeType": "VariableDeclaration",
-                "scope": 3479,
-                "src": "410:14:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                "scope": 2195,
+                "src": "427:14:8",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -1782,14 +1273,10 @@
                   "typeString": "uint128"
                 },
                 "typeName": {
-                  "id": 3467,
+                  "id": 2183,
                   "name": "uint128",
                   "nodeType": "ElementaryTypeName",
-<<<<<<< HEAD
-                  "src": "426:7:15",
-=======
-                  "src": "410:7:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                  "src": "427:7:8",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint128",
                     "typeString": "uint128"
@@ -1799,20 +1286,13 @@
               },
               {
                 "constant": false,
-                "id": 3470,
+                "id": 2186,
                 "mutability": "mutable",
                 "name": "okVotes",
-<<<<<<< HEAD
-                "nameLocation": "459:7:15",
+                "nameLocation": "460:7:8",
                 "nodeType": "VariableDeclaration",
-                "scope": 3479,
-                "src": "451:15:15",
-=======
-                "nameLocation": "442:7:15",
-                "nodeType": "VariableDeclaration",
-                "scope": 3479,
-                "src": "434:15:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                "scope": 2195,
+                "src": "452:15:8",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -1820,14 +1300,10 @@
                   "typeString": "uint128"
                 },
                 "typeName": {
-                  "id": 3469,
+                  "id": 2185,
                   "name": "uint128",
                   "nodeType": "ElementaryTypeName",
-<<<<<<< HEAD
-                  "src": "451:7:15",
-=======
-                  "src": "434:7:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                  "src": "452:7:8",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint128",
                     "typeString": "uint128"
@@ -1837,20 +1313,13 @@
               },
               {
                 "constant": false,
-                "id": 3472,
+                "id": 2188,
                 "mutability": "mutable",
                 "name": "nokVotes",
-<<<<<<< HEAD
-                "nameLocation": "485:8:15",
+                "nameLocation": "486:8:8",
                 "nodeType": "VariableDeclaration",
-                "scope": 3479,
-                "src": "477:16:15",
-=======
-                "nameLocation": "467:8:15",
-                "nodeType": "VariableDeclaration",
-                "scope": 3479,
-                "src": "459:16:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                "scope": 2195,
+                "src": "478:16:8",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -1858,14 +1327,10 @@
                   "typeString": "uint128"
                 },
                 "typeName": {
-                  "id": 3471,
+                  "id": 2187,
                   "name": "uint128",
                   "nodeType": "ElementaryTypeName",
-<<<<<<< HEAD
-                  "src": "477:7:15",
-=======
-                  "src": "459:7:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                  "src": "478:7:8",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint128",
                     "typeString": "uint128"
@@ -1875,47 +1340,33 @@
               },
               {
                 "constant": false,
-                "id": 3475,
+                "id": 2191,
                 "mutability": "mutable",
                 "name": "proposalType",
-<<<<<<< HEAD
-                "nameLocation": "517:12:15",
+                "nameLocation": "518:12:8",
                 "nodeType": "VariableDeclaration",
-                "scope": 3479,
-                "src": "504:25:15",
-=======
-                "nameLocation": "498:12:15",
-                "nodeType": "VariableDeclaration",
-                "scope": 3479,
-                "src": "485:25:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                "scope": 2195,
+                "src": "505:25:8",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_enum$_ProposalType_$3483",
+                  "typeIdentifier": "t_enum$_ProposalType_$2199",
                   "typeString": "enum IProposal.ProposalType"
                 },
                 "typeName": {
-                  "id": 3474,
+                  "id": 2190,
                   "nodeType": "UserDefinedTypeName",
                   "pathNode": {
-                    "id": 3473,
+                    "id": 2189,
                     "name": "ProposalType",
                     "nodeType": "IdentifierPath",
-                    "referencedDeclaration": 3483,
-<<<<<<< HEAD
-                    "src": "504:12:15"
+                    "referencedDeclaration": 2199,
+                    "src": "505:12:8"
                   },
-                  "referencedDeclaration": 3483,
-                  "src": "504:12:15",
-=======
-                    "src": "485:12:15"
-                  },
-                  "referencedDeclaration": 3483,
-                  "src": "485:12:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                  "referencedDeclaration": 2199,
+                  "src": "505:12:8",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_ProposalType_$3483",
+                    "typeIdentifier": "t_enum$_ProposalType_$2199",
                     "typeString": "enum IProposal.ProposalType"
                   }
                 },
@@ -1923,47 +1374,33 @@
               },
               {
                 "constant": false,
-                "id": 3478,
+                "id": 2194,
                 "mutability": "mutable",
                 "name": "status",
-<<<<<<< HEAD
-                "nameLocation": "555:6:15",
+                "nameLocation": "556:6:8",
                 "nodeType": "VariableDeclaration",
-                "scope": 3479,
-                "src": "540:21:15",
-=======
-                "nameLocation": "535:6:15",
-                "nodeType": "VariableDeclaration",
-                "scope": 3479,
-                "src": "520:21:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                "scope": 2195,
+                "src": "541:21:8",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_enum$_WorkflowStatus_$3488",
+                  "typeIdentifier": "t_enum$_WorkflowStatus_$2204",
                   "typeString": "enum IProposal.WorkflowStatus"
                 },
                 "typeName": {
-                  "id": 3477,
+                  "id": 2193,
                   "nodeType": "UserDefinedTypeName",
                   "pathNode": {
-                    "id": 3476,
+                    "id": 2192,
                     "name": "WorkflowStatus",
                     "nodeType": "IdentifierPath",
-                    "referencedDeclaration": 3488,
-<<<<<<< HEAD
-                    "src": "540:14:15"
+                    "referencedDeclaration": 2204,
+                    "src": "541:14:8"
                   },
-                  "referencedDeclaration": 3488,
-                  "src": "540:14:15",
-=======
-                    "src": "520:14:15"
-                  },
-                  "referencedDeclaration": 3488,
-                  "src": "520:14:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                  "referencedDeclaration": 2204,
+                  "src": "541:14:8",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_WorkflowStatus_$3488",
+                    "typeIdentifier": "t_enum$_WorkflowStatus_$2204",
                     "typeString": "enum IProposal.WorkflowStatus"
                   }
                 },
@@ -1971,185 +1408,109 @@
               }
             ],
             "name": "Proposal",
-<<<<<<< HEAD
-            "nameLocation": "283:8:15",
+            "nameLocation": "284:8:8",
             "nodeType": "StructDefinition",
-            "scope": 3536,
-            "src": "276:293:15",
-=======
-            "nameLocation": "273:8:15",
-            "nodeType": "StructDefinition",
-            "scope": 3536,
-            "src": "266:282:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+            "scope": 2252,
+            "src": "277:293:8",
             "visibility": "public"
           },
           {
             "canonicalName": "IProposal.ProposalType",
-            "id": 3483,
+            "id": 2199,
             "members": [
               {
-                "id": 3480,
+                "id": 2196,
                 "name": "Active",
-<<<<<<< HEAD
-                "nameLocation": "605:6:15",
+                "nameLocation": "606:6:8",
                 "nodeType": "EnumValue",
-                "src": "605:6:15"
-=======
-                "nameLocation": "581:6:15",
-                "nodeType": "EnumValue",
-                "src": "581:6:15"
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                "src": "606:6:8"
               },
               {
-                "id": 3481,
+                "id": 2197,
                 "name": "Archived",
-<<<<<<< HEAD
-                "nameLocation": "622:8:15",
+                "nameLocation": "623:8:8",
                 "nodeType": "EnumValue",
-                "src": "622:8:15"
-=======
-                "nameLocation": "597:8:15",
-                "nodeType": "EnumValue",
-                "src": "597:8:15"
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                "src": "623:8:8"
               },
               {
-                "id": 3482,
+                "id": 2198,
                 "name": "Deleted",
-<<<<<<< HEAD
-                "nameLocation": "641:7:15",
+                "nameLocation": "642:7:8",
                 "nodeType": "EnumValue",
-                "src": "641:7:15"
+                "src": "642:7:8"
               }
             ],
             "name": "ProposalType",
-            "nameLocation": "582:12:15",
+            "nameLocation": "583:12:8",
             "nodeType": "EnumDefinition",
-            "src": "577:78:15"
-=======
-                "nameLocation": "615:7:15",
-                "nodeType": "EnumValue",
-                "src": "615:7:15"
-              }
-            ],
-            "name": "ProposalType",
-            "nameLocation": "559:12:15",
-            "nodeType": "EnumDefinition",
-            "src": "554:74:15"
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+            "src": "578:78:8"
           },
           {
             "canonicalName": "IProposal.WorkflowStatus",
-            "id": 3488,
+            "id": 2204,
             "members": [
               {
-                "id": 3484,
+                "id": 2200,
                 "name": "Pending",
-<<<<<<< HEAD
-                "nameLocation": "694:7:15",
+                "nameLocation": "695:7:8",
                 "nodeType": "EnumValue",
-                "src": "694:7:15"
-=======
-                "nameLocation": "664:7:15",
-                "nodeType": "EnumValue",
-                "src": "664:7:15"
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                "src": "695:7:8"
               },
               {
-                "id": 3485,
+                "id": 2201,
                 "name": "Registered",
-<<<<<<< HEAD
-                "nameLocation": "712:10:15",
+                "nameLocation": "713:10:8",
                 "nodeType": "EnumValue",
-                "src": "712:10:15"
-=======
-                "nameLocation": "681:10:15",
-                "nodeType": "EnumValue",
-                "src": "681:10:15"
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                "src": "713:10:8"
               },
               {
-                "id": 3486,
+                "id": 2202,
                 "name": "VotingSessionStarted",
-<<<<<<< HEAD
-                "nameLocation": "733:20:15",
+                "nameLocation": "734:20:8",
                 "nodeType": "EnumValue",
-                "src": "733:20:15"
-=======
-                "nameLocation": "701:20:15",
-                "nodeType": "EnumValue",
-                "src": "701:20:15"
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                "src": "734:20:8"
               },
               {
-                "id": 3487,
+                "id": 2203,
                 "name": "VotesTallied",
-<<<<<<< HEAD
-                "nameLocation": "764:12:15",
+                "nameLocation": "765:12:8",
                 "nodeType": "EnumValue",
-                "src": "764:12:15"
+                "src": "765:12:8"
               }
             ],
             "name": "WorkflowStatus",
-            "nameLocation": "668:14:15",
+            "nameLocation": "669:14:8",
             "nodeType": "EnumDefinition",
-            "src": "663:120:15"
-=======
-                "nameLocation": "731:12:15",
-                "nodeType": "EnumValue",
-                "src": "731:12:15"
-              }
-            ],
-            "name": "WorkflowStatus",
-            "nameLocation": "639:14:15",
-            "nodeType": "EnumDefinition",
-            "src": "634:115:15"
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+            "src": "664:120:8"
           },
           {
             "documentation": {
-              "id": 3489,
+              "id": 2205,
               "nodeType": "StructuredDocumentation",
-<<<<<<< HEAD
-              "src": "791:291:15",
-=======
-              "src": "755:285:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+              "src": "792:291:8",
               "text": " @notice Create a new proposal\n @param _title The proposal title\n @param _description The proposal description\n @param _amount The amount to be unlocked for spending\n @dev can only be called by campaign manager and if WorkflowStatus is Pending"
             },
             "functionSelector": "5cbd4d05",
-            "id": 3498,
+            "id": 2214,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "createProposal",
-<<<<<<< HEAD
-            "nameLocation": "1097:14:15",
-=======
-            "nameLocation": "1054:14:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+            "nameLocation": "1098:14:8",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3496,
+              "id": 2212,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3491,
+                  "id": 2207,
                   "mutability": "mutable",
                   "name": "_title",
-<<<<<<< HEAD
-                  "nameLocation": "1126:6:15",
+                  "nameLocation": "1127:6:8",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3498,
-                  "src": "1112:20:15",
-=======
-                  "nameLocation": "1083:6:15",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 3498,
-                  "src": "1069:20:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                  "scope": 2214,
+                  "src": "1113:20:8",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -2157,14 +1518,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 3490,
+                    "id": 2206,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-<<<<<<< HEAD
-                    "src": "1112:6:15",
-=======
-                    "src": "1069:6:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                    "src": "1113:6:8",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -2174,20 +1531,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 3493,
+                  "id": 2209,
                   "mutability": "mutable",
                   "name": "_description",
-<<<<<<< HEAD
-                  "nameLocation": "1148:12:15",
+                  "nameLocation": "1149:12:8",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3498,
-                  "src": "1134:26:15",
-=======
-                  "nameLocation": "1105:12:15",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 3498,
-                  "src": "1091:26:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                  "scope": 2214,
+                  "src": "1135:26:8",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -2195,14 +1545,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 3492,
+                    "id": 2208,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-<<<<<<< HEAD
-                    "src": "1134:6:15",
-=======
-                    "src": "1091:6:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                    "src": "1135:6:8",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -2212,20 +1558,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 3495,
+                  "id": 2211,
                   "mutability": "mutable",
                   "name": "_amount",
-<<<<<<< HEAD
-                  "nameLocation": "1170:7:15",
+                  "nameLocation": "1171:7:8",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3498,
-                  "src": "1162:15:15",
-=======
-                  "nameLocation": "1127:7:15",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 3498,
-                  "src": "1119:15:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                  "scope": 2214,
+                  "src": "1163:15:8",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2233,14 +1572,10 @@
                     "typeString": "uint128"
                   },
                   "typeName": {
-                    "id": 3494,
+                    "id": 2210,
                     "name": "uint128",
                     "nodeType": "ElementaryTypeName",
-<<<<<<< HEAD
-                    "src": "1162:7:15",
-=======
-                    "src": "1119:7:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                    "src": "1163:7:8",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint128",
                       "typeString": "uint128"
@@ -2249,74 +1584,48 @@
                   "visibility": "internal"
                 }
               ],
-<<<<<<< HEAD
-              "src": "1111:67:15"
-=======
-              "src": "1068:67:15"
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+              "src": "1112:67:8"
             },
             "returnParameters": {
-              "id": 3497,
+              "id": 2213,
               "nodeType": "ParameterList",
               "parameters": [],
-<<<<<<< HEAD
-              "src": "1187:0:15"
+              "src": "1188:0:8"
             },
-            "scope": 3536,
-            "src": "1088:100:15",
-=======
-              "src": "1144:0:15"
-            },
-            "scope": 3536,
-            "src": "1045:100:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+            "scope": 2252,
+            "src": "1089:100:8",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
             "documentation": {
-              "id": 3499,
+              "id": 2215,
               "nodeType": "StructuredDocumentation",
-<<<<<<< HEAD
-              "src": "1196:211:15",
-=======
-              "src": "1151:207:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+              "src": "1197:211:8",
               "text": " @notice Delete proposal\n @param  _proposalId The proposal's index inside the proposalList array\n @dev can only be called by campaign manager and if WorkflowStatus is Registered"
             },
             "functionSelector": "34bdcdd7",
-            "id": 3504,
+            "id": 2220,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "deleteProposal",
-<<<<<<< HEAD
-            "nameLocation": "1422:14:15",
-=======
-            "nameLocation": "1372:14:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+            "nameLocation": "1423:14:8",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3502,
+              "id": 2218,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3501,
+                  "id": 2217,
                   "mutability": "mutable",
                   "name": "_proposalId",
-<<<<<<< HEAD
-                  "nameLocation": "1443:11:15",
+                  "nameLocation": "1444:11:8",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3504,
-                  "src": "1437:17:15",
-=======
-                  "nameLocation": "1393:11:15",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 3504,
-                  "src": "1387:17:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                  "scope": 2220,
+                  "src": "1438:17:8",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2324,14 +1633,10 @@
                     "typeString": "uint8"
                   },
                   "typeName": {
-                    "id": 3500,
+                    "id": 2216,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
-<<<<<<< HEAD
-                    "src": "1437:5:15",
-=======
-                    "src": "1387:5:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                    "src": "1438:5:8",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint8",
                       "typeString": "uint8"
@@ -2340,74 +1645,48 @@
                   "visibility": "internal"
                 }
               ],
-<<<<<<< HEAD
-              "src": "1436:19:15"
-=======
-              "src": "1386:19:15"
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+              "src": "1437:19:8"
             },
             "returnParameters": {
-              "id": 3503,
+              "id": 2219,
               "nodeType": "ParameterList",
               "parameters": [],
-<<<<<<< HEAD
-              "src": "1464:0:15"
+              "src": "1465:0:8"
             },
-            "scope": 3536,
-            "src": "1413:52:15",
-=======
-              "src": "1414:0:15"
-            },
-            "scope": 3536,
-            "src": "1363:52:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+            "scope": 2252,
+            "src": "1414:52:8",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
             "documentation": {
-              "id": 3505,
+              "id": 2221,
               "nodeType": "StructuredDocumentation",
-<<<<<<< HEAD
-              "src": "1473:224:15",
-=======
-              "src": "1421:220:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+              "src": "1474:224:8",
               "text": " @notice start proposal voting process\n @param _proposalId The proposal's index inside the proposalList array\n @dev can only be called by campaign manager and if WorkflowStatus is Registered"
             },
             "functionSelector": "05f86040",
-            "id": 3510,
+            "id": 2226,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "startVotingSession",
-<<<<<<< HEAD
-            "nameLocation": "1712:18:15",
-=======
-            "nameLocation": "1655:18:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+            "nameLocation": "1713:18:8",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3508,
+              "id": 2224,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3507,
+                  "id": 2223,
                   "mutability": "mutable",
                   "name": "_proposalId",
-<<<<<<< HEAD
-                  "nameLocation": "1737:11:15",
+                  "nameLocation": "1738:11:8",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3510,
-                  "src": "1731:17:15",
-=======
-                  "nameLocation": "1680:11:15",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 3510,
-                  "src": "1674:17:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                  "scope": 2226,
+                  "src": "1732:17:8",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2415,14 +1694,10 @@
                     "typeString": "uint8"
                   },
                   "typeName": {
-                    "id": 3506,
+                    "id": 2222,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
-<<<<<<< HEAD
-                    "src": "1731:5:15",
-=======
-                    "src": "1674:5:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                    "src": "1732:5:8",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint8",
                       "typeString": "uint8"
@@ -2431,74 +1706,48 @@
                   "visibility": "internal"
                 }
               ],
-<<<<<<< HEAD
-              "src": "1730:19:15"
-=======
-              "src": "1673:19:15"
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+              "src": "1731:19:8"
             },
             "returnParameters": {
-              "id": 3509,
+              "id": 2225,
               "nodeType": "ParameterList",
               "parameters": [],
-<<<<<<< HEAD
-              "src": "1758:0:15"
+              "src": "1759:0:8"
             },
-            "scope": 3536,
-            "src": "1703:56:15",
-=======
-              "src": "1701:0:15"
-            },
-            "scope": 3536,
-            "src": "1646:56:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+            "scope": 2252,
+            "src": "1704:56:8",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
             "documentation": {
-              "id": 3511,
+              "id": 2227,
               "nodeType": "StructuredDocumentation",
-<<<<<<< HEAD
-              "src": "1767:299:15",
-=======
-              "src": "1708:294:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+              "src": "1768:299:8",
               "text": " @notice enable contributors to vote for or against proposal\n @param _proposalId The proposal's index inside the proposalList array\n @param _vote As 1 for ok and 0 for nok\n @dev can only be called by contributors and if WorkflowStatus is VotingSessionStarted"
             },
             "functionSelector": "fe48e8b1",
-            "id": 3518,
+            "id": 2234,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "voteProposal",
-<<<<<<< HEAD
-            "nameLocation": "2081:12:15",
-=======
-            "nameLocation": "2016:12:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+            "nameLocation": "2082:12:8",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3516,
+              "id": 2232,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3513,
+                  "id": 2229,
                   "mutability": "mutable",
                   "name": "_proposalId",
-<<<<<<< HEAD
-                  "nameLocation": "2100:11:15",
+                  "nameLocation": "2101:11:8",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3518,
-                  "src": "2094:17:15",
-=======
-                  "nameLocation": "2035:11:15",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 3518,
-                  "src": "2029:17:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                  "scope": 2234,
+                  "src": "2095:17:8",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2506,14 +1755,10 @@
                     "typeString": "uint8"
                   },
                   "typeName": {
-                    "id": 3512,
+                    "id": 2228,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
-<<<<<<< HEAD
-                    "src": "2094:5:15",
-=======
-                    "src": "2029:5:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                    "src": "2095:5:8",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint8",
                       "typeString": "uint8"
@@ -2523,20 +1768,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 3515,
+                  "id": 2231,
                   "mutability": "mutable",
                   "name": "_vote",
-<<<<<<< HEAD
-                  "nameLocation": "2118:5:15",
+                  "nameLocation": "2119:5:8",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3518,
-                  "src": "2113:10:15",
-=======
-                  "nameLocation": "2053:5:15",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 3518,
-                  "src": "2048:10:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                  "scope": 2234,
+                  "src": "2114:10:8",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2544,14 +1782,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 3514,
+                    "id": 2230,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-<<<<<<< HEAD
-                    "src": "2113:4:15",
-=======
-                    "src": "2048:4:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                    "src": "2114:4:8",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -2560,74 +1794,48 @@
                   "visibility": "internal"
                 }
               ],
-<<<<<<< HEAD
-              "src": "2093:31:15"
-=======
-              "src": "2028:31:15"
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+              "src": "2094:31:8"
             },
             "returnParameters": {
-              "id": 3517,
+              "id": 2233,
               "nodeType": "ParameterList",
               "parameters": [],
-<<<<<<< HEAD
-              "src": "2133:0:15"
+              "src": "2134:0:8"
             },
-            "scope": 3536,
-            "src": "2072:62:15",
-=======
-              "src": "2068:0:15"
-            },
-            "scope": 3536,
-            "src": "2007:62:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+            "scope": 2252,
+            "src": "2073:62:8",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
             "documentation": {
-              "id": 3519,
+              "id": 2235,
               "nodeType": "StructuredDocumentation",
-<<<<<<< HEAD
-              "src": "2142:205:15",
-=======
-              "src": "2075:201:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+              "src": "2143:205:8",
               "text": " @notice check if proposal is ok or nok\n @param _proposalId The proposal's index inside the proposalList array\n @dev can only be called only if proposal deadline is passed"
             },
             "functionSelector": "21686945",
-            "id": 3524,
+            "id": 2240,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getResults",
-<<<<<<< HEAD
-            "nameLocation": "2362:10:15",
-=======
-            "nameLocation": "2290:10:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+            "nameLocation": "2363:10:8",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3522,
+              "id": 2238,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3521,
+                  "id": 2237,
                   "mutability": "mutable",
                   "name": "_proposalId",
-<<<<<<< HEAD
-                  "nameLocation": "2379:11:15",
+                  "nameLocation": "2380:11:8",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3524,
-                  "src": "2373:17:15",
-=======
-                  "nameLocation": "2307:11:15",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 3524,
-                  "src": "2301:17:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                  "scope": 2240,
+                  "src": "2374:17:8",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2635,14 +1843,10 @@
                     "typeString": "uint8"
                   },
                   "typeName": {
-                    "id": 3520,
+                    "id": 2236,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
-<<<<<<< HEAD
-                    "src": "2373:5:15",
-=======
-                    "src": "2301:5:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                    "src": "2374:5:8",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint8",
                       "typeString": "uint8"
@@ -2651,219 +1855,147 @@
                   "visibility": "internal"
                 }
               ],
-<<<<<<< HEAD
-              "src": "2372:19:15"
-=======
-              "src": "2300:19:15"
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+              "src": "2373:19:8"
             },
             "returnParameters": {
-              "id": 3523,
+              "id": 2239,
               "nodeType": "ParameterList",
               "parameters": [],
-<<<<<<< HEAD
-              "src": "2400:0:15"
+              "src": "2401:0:8"
             },
-            "scope": 3536,
-            "src": "2353:48:15",
-=======
-              "src": "2328:0:15"
-            },
-            "scope": 3536,
-            "src": "2281:48:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+            "scope": 2252,
+            "src": "2354:48:8",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
             "documentation": {
-              "id": 3525,
+              "id": 2241,
               "nodeType": "StructuredDocumentation",
-<<<<<<< HEAD
-              "src": "2409:242:15",
-=======
-              "src": "2335:238:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+              "src": "2410:242:8",
               "text": " @notice return list of proposal matching proposalType of param\n @param _proposalStatus The proposalType (active, archived or deleted)\n @return Array The list of Proposals corresponding to the _proposalStatus"
             },
             "functionSelector": "4caae8a0",
-            "id": 3535,
+            "id": 2251,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getProposals",
-<<<<<<< HEAD
-            "nameLocation": "2666:12:15",
-=======
-            "nameLocation": "2587:12:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+            "nameLocation": "2667:12:8",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 3529,
+              "id": 2245,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3528,
+                  "id": 2244,
                   "mutability": "mutable",
                   "name": "_proposalStatus",
-<<<<<<< HEAD
-                  "nameLocation": "2692:15:15",
+                  "nameLocation": "2693:15:8",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3535,
-                  "src": "2679:28:15",
-=======
-                  "nameLocation": "2613:15:15",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 3535,
-                  "src": "2600:28:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                  "scope": 2251,
+                  "src": "2680:28:8",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_ProposalType_$3483",
+                    "typeIdentifier": "t_enum$_ProposalType_$2199",
                     "typeString": "enum IProposal.ProposalType"
                   },
                   "typeName": {
-                    "id": 3527,
+                    "id": 2243,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 3526,
+                      "id": 2242,
                       "name": "ProposalType",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 3483,
-<<<<<<< HEAD
-                      "src": "2679:12:15"
+                      "referencedDeclaration": 2199,
+                      "src": "2680:12:8"
                     },
-                    "referencedDeclaration": 3483,
-                    "src": "2679:12:15",
-=======
-                      "src": "2600:12:15"
-                    },
-                    "referencedDeclaration": 3483,
-                    "src": "2600:12:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                    "referencedDeclaration": 2199,
+                    "src": "2680:12:8",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_ProposalType_$3483",
+                      "typeIdentifier": "t_enum$_ProposalType_$2199",
                       "typeString": "enum IProposal.ProposalType"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-<<<<<<< HEAD
-              "src": "2678:30:15"
-=======
-              "src": "2599:30:15"
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+              "src": "2679:30:8"
             },
             "returnParameters": {
-              "id": 3534,
+              "id": 2250,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 3533,
+                  "id": 2249,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 3535,
-<<<<<<< HEAD
-                  "src": "2731:17:15",
-=======
-                  "src": "2652:17:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                  "scope": 2251,
+                  "src": "2732:17:8",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_Proposal_$3479_memory_ptr_$dyn_memory_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_Proposal_$2195_memory_ptr_$dyn_memory_ptr",
                     "typeString": "struct IProposal.Proposal[]"
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 3531,
+                      "id": 2247,
                       "nodeType": "UserDefinedTypeName",
                       "pathNode": {
-                        "id": 3530,
+                        "id": 2246,
                         "name": "Proposal",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 3479,
-<<<<<<< HEAD
-                        "src": "2731:8:15"
+                        "referencedDeclaration": 2195,
+                        "src": "2732:8:8"
                       },
-                      "referencedDeclaration": 3479,
-                      "src": "2731:8:15",
-=======
-                        "src": "2652:8:15"
-                      },
-                      "referencedDeclaration": 3479,
-                      "src": "2652:8:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                      "referencedDeclaration": 2195,
+                      "src": "2732:8:8",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Proposal_$3479_storage_ptr",
+                        "typeIdentifier": "t_struct$_Proposal_$2195_storage_ptr",
                         "typeString": "struct IProposal.Proposal"
                       }
                     },
-                    "id": 3532,
+                    "id": 2248,
                     "nodeType": "ArrayTypeName",
-<<<<<<< HEAD
-                    "src": "2731:10:15",
-=======
-                    "src": "2652:10:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+                    "src": "2732:10:8",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_Proposal_$3479_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_Proposal_$2195_storage_$dyn_storage_ptr",
                       "typeString": "struct IProposal.Proposal[]"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-<<<<<<< HEAD
-              "src": "2730:19:15"
+              "src": "2731:19:8"
             },
-            "scope": 3536,
-            "src": "2657:93:15",
-=======
-              "src": "2651:19:15"
-            },
-            "scope": 3536,
-            "src": "2578:93:15",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+            "scope": 2252,
+            "src": "2658:93:8",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 3537,
-<<<<<<< HEAD
-        "src": "247:2508:15",
+        "scope": 2253,
+        "src": "248:2508:8",
         "usedErrors": []
       }
     ],
-    "src": "37:2720:15"
-=======
-        "src": "239:2435:15",
-        "usedErrors": []
-      }
-    ],
-    "src": "36:2639:15"
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+    "src": "37:2721:8"
   },
   "compiler": {
     "name": "solc",
     "version": "0.8.6+commit.11564f7e.Emscripten.clang"
   },
   "networks": {},
-<<<<<<< HEAD
-  "schemaVersion": "3.4.2",
-  "updatedAt": "2021-08-06T20:34:32.502Z",
-=======
   "schemaVersion": "3.4.1",
-  "updatedAt": "2021-08-06T10:00:35.197Z",
->>>>>>> 29b83c4e9fe9e6bba63ea1cfb683a788bb5d434d
+  "updatedAt": "2021-08-16T18:46:21.284Z",
   "devdoc": {
     "details": "Interface for the Proposal contract",
     "kind": "dev",
